@@ -17,15 +17,15 @@ We set up the data frame. Edit the data below to include information about your 
 
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
-           "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
-                      "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
-            "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  name = c("Cameron Fisher", "Harry English", "Tom Cummings", 
+           "Fin McLachlan", "Evan Huwe"),
+  github_username = c("cameronfisher05", "Harryenglish", "tom-rex", 
+                      "finmc3", "evanh05"), 
+  colour = c("blue", "blue", "red", 
+             "blue", "blue"),
+  hobby = c("golf", "boxing", "data science", 
+            "chasing people", "cricket"),
+  favourite_number = c(7, 6.02, 2.7, 1, 6.6)
   )
 
 team_data
@@ -33,7 +33,7 @@ team_data
 
 ### Exercise 18
 
-We now work on visualising our data. 
+We now work on visualising our data.  .
 
 ```{r bar-plot}
 p1 <- ggplot(data = team_data, 
@@ -47,19 +47,19 @@ p1
 ```
 
 
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+A bar chart with our favourite numbers visualised on the y-axis.
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
-          title = "Insert text here")
+p1 + labs(x = "Names of table", 
+          y = "Favourite number",
+          title = "A graph to show data from table 9")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
+Lab, appears to be the function that puts labels on a plot or graph.
 
 ### Exercise 20
 
@@ -69,4 +69,4 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+The hobbies are too different from each other, it would be better to group hobbies into sports and other categories, that way you could see just 4 parts to the bar chart, rather than 100+, for the 100+ people in the data set.
